@@ -1,0 +1,16 @@
+{
+  "config_entries": {
+    "qobuz_provider": {
+      "label": "Qobuz account",
+      "description": "The Qobuz music provider whose account the devices join. The devices play through it and appear in the Qobuz apps of this account."
+    },
+    "connected_players": {
+      "label": "[%key:common::config_entries::connected_players::label%]",
+      "description": "The Music Assistant players to expose via Qobuz Connect. Every selected player appears as its own device in the Qobuz apps. Leave empty to keep the plugin idle."
+    },
+    "publish_name_template": {
+      "label": "[%key:common::config_entries::publish_name_template::label%]",
+      "description": "How each device shown in the Qobuz apps is named, based on the connected player's name."
+    }
+  }
+}

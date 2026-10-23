@@ -211,6 +211,18 @@ class QobuzProvider(MusicProvider):
             msg = f"Login failed for user {self.get_setup_value(CONF_USERNAME)}"
             raise LoginFailed(msg)
 
+    async def get_user_auth_token(self) -> str:
+        """
+        Return the user auth token of the logged-in account.
+
+        Used by the Qobuz Connect plugin to join the account's Connect session.
+        """
+        token = await self._auth_token()
+        if not token:
+            msg = f"Login failed for user {self.get_setup_value(CONF_USERNAME)}"
+            raise LoginFailed(msg)
+        return token
+
     @use_cache(3600 * 24 * 14, cache_checksum=PARSED_ITEM_CACHE_CHECKSUM)  # Cache for 14 days
     async def search(
         self, search_query: str, media_types: list[MediaType], limit: int = 5
