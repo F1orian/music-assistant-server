@@ -1,0 +1,15 @@
+{
+  "type": "plugin",
+  "domain": "qobuz_connect",
+  "stage": "alpha",
+  "name": "Qobuz Connect",
+  "description": "Makes Music Assistant players appear as devices in the official Qobuz apps via Qobuz Connect.",
+  "codeowners": ["@F1orian"],
+  "credits": [
+    "[qobuz-connect (by ciaens)](https://github.com/ciaens/qobuz-connect) for the protocol schema"
+  ],
+  "depends_on": "qobuz",
+  "requirements": [],
+  "documentation": "https://music-assistant.io/plugins/qobuz-connect/",
+  "multi_instance": false
+}
